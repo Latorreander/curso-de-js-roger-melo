@@ -20,13 +20,13 @@
     4
     5
 */
-let i = 0
 
-while(i < 0){
-  console.log(i)
-  i++
-}
+// let i = 0
 
+// while (i <= 5) {
+//   console.log(i)
+//   i++
+// }
 
 
 /*
@@ -35,7 +35,9 @@ while(i < 0){
   - Utilizando um for loop, faça o mesmo que foi pedido no exercício 01.
 */
 
-
+// for (let i = 0; i <= 5; i++){
+//   console.log(i)
+// }
 
 /*
   03 - Comente o loop acima e:
@@ -48,6 +50,16 @@ while(i < 0){
   "Esta é a Xª vez que esta frase é exibida no console."
 */
 
+// for(let i = 1; i <= 10; i++){
+//   console.log(`Esta é a ${i}ª vez que esta frase é exibida no console.`)
+// }
+
+// let i = 1
+
+// while(i <= 10){
+//   console.log(`Esta é a ${i}ª vez que esta frase é exibida no console.`)
+//   i++
+// }
 
 
 /*
@@ -62,6 +74,16 @@ while(i < 0){
 
 const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais']
 
+let upperCaseCities = []
+
+for(let i = 0; i < cities.length; i++){
+  upperCaseCities.push(cities[i].toUpperCase())
+}
+ 
+// console.log(upperCaseCities)
+
+
+
 /*
   05 - Comente o console.log acima e:
 
@@ -73,6 +95,13 @@ const cities = ['São Paulo', 'Rio de Janeiro', 'Minas Gerais']
 
 const names = ['João Grilo', 'Chicó', 'Rosinha']
 
+let HTMLTemplate = ''
+
+for(let i = 0; i < names.length; i++){
+  HTMLTemplate += `<li>${names[i]}</li>`
+}
+// console.log(HTMLTemplate)
+
 /*
   06 - Comente o console.log acima e:
 
@@ -83,6 +112,18 @@ const names = ['João Grilo', 'Chicó', 'Rosinha']
 */
 
 const numbers = ['91', '5', '30', '97', '83', '31']
+let sum = 0
+
+for(let i = 0; i < numbers.length; i++){
+
+  sum += Number(numbers[i])
+  
+}
+// console.log(sum)
+
+// console.log(sum === 337)
+
+
 
 /*
   07 - Comente o console.log acima.
@@ -108,3 +149,18 @@ const arrays = [
   [8, 32, 16],
   [2, 8, 4]
 ]
+
+ let arrSum = 0
+
+for(let i = 0; i < arrays.length; i++){
+  console.log(arrays[i])
+
+  for(let x = 0; x < arrays[i].length; x++){
+    console.log(arrays[i][x])
+
+    arrSum += arrays[i][x]
+  }
+}
+
+
+console.log(arrSum)

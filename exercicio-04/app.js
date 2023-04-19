@@ -39,7 +39,8 @@ const sentence = `Minhas 3 séries favoritas são: ${my3FavoriteTVShows.join(', 
 */
 
 const randomTVShow = 'Watchmen'
-const isRandomTVShowIncluded = my3FavoriteTVShows.includes(randomTVShow)
+
+isRandomTVShowIncluded = my3FavoriteTVShows.includes(randomTVShow)
 
 // console.log(isRandomTVShowIncluded)
 
@@ -53,7 +54,7 @@ const isRandomTVShowIncluded = my3FavoriteTVShows.includes(randomTVShow)
 
   "O tipo de dado que a const "isRandomTVShowIncluded" armazena é: TIPO_DE_DADO."
 */
-const typeSentence = `O tipo de dado que a const 'isRandomTVShowIncluded' armazena é: ${typeof isRandomTVShowIncluded}`
+ const typeSentence = `O tipo de dado que a const "isRandomTVShowIncluded" armazena é: ${typeof isRandomTVShowIncluded}`
 
 // console.log(typeSentence)
 
@@ -137,8 +138,8 @@ const agesSum = ages[0] + ages[2]
 */
  const isNotAString = typeof randomTVShow !== 'string'
 
-//  console.log( typeof randomTVShow);
-//  console.log(isNotAString);
+ console.log( typeof randomTVShow);
+ console.log(isNotAString);
 
 
 /*

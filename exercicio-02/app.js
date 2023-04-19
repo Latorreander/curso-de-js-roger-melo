@@ -91,6 +91,8 @@ let randomWord = 'Araponga'
 // console.log(randomWord[randomWord.length -1])
 
 
+
+
 /*
 09 - Comente o console.log acima, e,
 
@@ -141,7 +143,7 @@ const winterMessage = 'o inverno está chegando'
 
 const harryPotterAuthor = 'J.K. Rowling'
 
-// console.log(harryPotterAuthor.slice(0,4))
+// console.log(harryPotterAuthor.slice(0, 4))
 
 /*
 14 - Comente o console.log acima, e,

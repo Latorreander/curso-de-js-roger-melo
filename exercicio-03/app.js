@@ -22,7 +22,7 @@ let brazilianFoods = []
 - Exiba a brazilianFoods no console.
 */
 
-brazilianFoods.push('Coxinha', null, 'Brigadeiro')
+brazilianFoods.push('Coxinha', 'null', 'Brigadeiro')
 
 // console.log(brazilianFoods)
 
@@ -101,6 +101,7 @@ agora é "Lilica".
 
 // console.log(dogNames[dogNames.length -1])
 
+
 /*
 09 - Comente o console.log acima e:
 
@@ -114,7 +115,9 @@ apenas as letras iniciais dos nomes do array "dogNames";
 */
 
 dogNames.push('Nina')
-const initials = `${dogNames[0][0]}${dogNames[1][0]}${dogNames[2][0]}${dogNames[3][0]}${dogNames[4][0]}`
+// console.log(dogNames)
+
+const initials = dogNames[0][0] + dogNames[1][0] + dogNames[2][0] + dogNames[3][0] + dogNames[4][0]
 
 // console.log(initials)
 
@@ -164,7 +167,7 @@ já tem, mais 4;
 */
 
 let oddNumbers = [3, 5, 7]
-oddNumbers[1] += 4
 
-console.log(oddNumbers[1])
+oddNumbers[1] += 4
 console.log(oddNumbers[1] ** 3)
+console.log(oddNumbers[1] ** 2)

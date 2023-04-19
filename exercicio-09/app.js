@@ -13,9 +13,14 @@
     valor no console.
 */
 
-function convertToString (value) {
-  return String(value)
-}
+// function convertToString (value) {
+//   return String(value)
+// }
+
+
+const convertToString = value => String(value)
+
+console.log(convertToString(true))
 
 /*
   02
@@ -23,6 +28,11 @@ function convertToString (value) {
   - Crie uma função que retorne a quantidade de caracteres que uma string  
     recebida por parâmetro possui.
 */
+
+const getStringLength = string => string.length
+
+
+  console.log(getStringLength('welcome'))
 
 /*
   03
@@ -34,12 +44,31 @@ function convertToString (value) {
   "CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO"
 */
 
+// const sentenceToLowerCase = sentence =>{
+//   let newSentence = ''
+//   newSentence += sentence.toLowerCase()
+
+//   return newSentence
+// }
+
+const sentenceToLowerCase = sentence => sentence.toLowerCase()
+
+
+console.log(sentenceToLowerCase('CHOCOTONE E OVO DE PÁSCOA JUNTOS NO MERCADO EM PLENO FEVEREIRO'))
+
 /*
   04
 
   - Crie uma função que recebe 2 parâmetros: um caractere e uma string;
   - Ao ser invocada, a função deve retornar o index do caractere na string.
 */
+
+// const letter = 's'
+// const word = 'Javascript'
+
+const getIndexOfCharacter = (string, character ) => string.indexOf(character)
+ 
+console.log(getIndexOfCharacter('javascript', 's' ))
 
 /*
   05
@@ -48,6 +77,12 @@ function convertToString (value) {
     passado por argumento existe no array (também passado por argumento).
 */
 
+// const fruits = ['maçã', 'pera', 'uva']
+
+const checkArrayItem = (item, array) => array.includes(item)
+
+console.log(checkArrayItem('pera', ['maçã', 'pera', 'uva'] ))
+
 /*
   06
 
@@ -55,19 +90,48 @@ function convertToString (value) {
     argumentos em sua invocação;
 */
 
+// const firstArray = [1, 2, 3]
+// const secondArray = [4, 5, 6]
+
+const joinedArray = (array1, array2) => array1.concat(array2)
+
+
+console.log(joinedArray([1, 2, 3], [4, 5, 6]))
+
 /*
   07
 
   - Crie uma função que retorna o array passado como argumento em sua invocação,  
     mas com o último item removido.
 */
+// const randomArray = [null, 'sapato', 326, true, 'chapéu']
 
+const removeLastItemOfArray = array => {
+  array.pop()
+  return array
+
+}
+
+console.log(removeLastItemOfArray([null, 'sapato', 326, true, 'chapéu']))
 /*
   08
 
   - Crie uma função que retorna se o valor passado como argumento em sua  
     invocação é null.
 */
+
+// const isANull = value => {
+
+//   if(value === null){  
+//     console.log(`o Valor é ${value}`)
+//   }
+// }
+
+// isANull(null)
+
+const isANull = value => value === null
+
+console.log(isANull())
 
 /*
   09
@@ -80,6 +144,17 @@ function convertToString (value) {
     foi exibido.
 */
 
+const myFunc = showName => {
+  showName()
+}
+
+const showName = () => {
+  console.log('Anderson')
+}
+
+myFunc(showName)
+
+
 /*
   10
 
@@ -90,6 +165,27 @@ function convertToString (value) {
   - Faça com que a invocação da função descrita no 1º item deste exercício (10)  
     resulte no triplo de 33.
 */
+
+const tripleOf33 = () => {
+  const value = 33
+
+
+  triple(value)
+}
+
+const triple = number => {
+   console.log(number * 3)
+}
+
+tripleOf33()
+
+// const callCallback = (value, callback) => {
+//   return callback(value)
+// }
+
+// const triple = number => number * 3
+
+// console.log(callCallback(33, triple))
 
 /*
   11
@@ -102,6 +198,16 @@ function convertToString (value) {
 
 const numbers = [1, 2, 3]
 
+const showNumbersInfo = (item, index, array) => {
+
+  const arrayNumbers = array.join(', ')
+  const itemPosition = index + 1
+  
+  console.log(`O ${itemPosition}º item do array [${arrayNumbers}] é ${item}.`)
+}
+
+numbers.forEach(showNumbersInfo)
+
 /*
   12
 
@@ -113,9 +219,17 @@ const numbers = [1, 2, 3]
 const letters = ['v', 'e', 'p']
 let lettersCopy = []
 
-for (let i = 0; i < letters.length; i++) {
-  lettersCopy.push(letters[i])
-}
+// for (let i = 0; i < letters.length; i++) {
+//   lettersCopy.push(letters[i])
+// }
+
+letters.forEach(letter => {
+  lettersCopy.push(letter)
+})
+
+console.log(lettersCopy)
+
+
 
 /*
   13
@@ -146,6 +260,12 @@ const review = [
 
 let paragraphs = ''
 
+const createParagraph = paragraph => {
+  paragraphs += `<p>${paragraph}</p>`
+}
+
+review.forEach(createParagraph)
+
 section.innerHTML = paragraphs
 
 /*
@@ -168,3 +288,67 @@ section.innerHTML = paragraphs
     pelo restante da quantidade de pessoas que curtiram o post (além das duas  
     pessoas já mencionadas no início da mensagem).
 */
+
+// const likedPosts = ['Cezar', 'Amanda', 'Aline', 'Ricardo','j', 'hj']
+
+// const checkLiked = array => {
+
+//   for(let i = 0; i < array.length; i++){}
+
+//     if(array.length === 0){
+//       console.log('Ninguém curtiu isso')
+//     }
+
+//     if(array.length === 1){
+//     console.log(`${array[0]} curtiu isso`)
+//   }
+
+//     if(array.length === 2){
+//     console.log(`${array[0]} e ${array[1]} curtiram isso`)
+//   }
+
+//     if(array.length === 3) {
+//       console.log(`${array[0]}, ${array[1]} e ${array[2]} curtiram isso`)
+//     }
+//   else if(array.length > 3){
+//     console.log(`${array[0]}, ${array[1]} e mais ${array.length - 2} pessoas curtiram isso`)
+//   }
+
+// }
+
+// checkLiked(likedPosts)
+
+const getLikeMessage = (names = []) => {
+  const firstName = names[0]
+  const secondName = names[1]
+  const thirdName = names[2]
+  const totalNamesMinusTwo = names.length -2
+
+  switch (names.length){
+    
+    case 0:
+     return 'Ningém curtiu isso'
+
+    case 1:
+     return `${firstName} curtiu isso`
+   
+    case 2:
+     return `${firstName} e ${secondName} curtiram isso`
+
+    case 3:
+     return `${firstName}, ${secondName} e ${thirdName} curtiram isso`
+  
+    default:
+    return `${firstName}, ${secondName} e mais ${
+  totalNamesMinusTwo
+    } pessoas curtiram isso`
+  }  
+}
+
+console.log(getLikeMessage(['cezar']))
+
+
+
+
+
+
